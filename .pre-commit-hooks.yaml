@@ -51,6 +51,14 @@
   files: \.(tf(vars)?|terraform\.lock\.hcl)$
   exclude: \.terraform/.*$
 
+- id: terraform_test
+  name: Terraform test
+  description: Runs all terraform tests
+  entry: hooks/terraform_test.sh
+  language: script
+  files: \.(tf(vars|test\.(hcl|json))?|terraform\.lock\.hcl|\.tf)$
+  exclude: \.terraform\/.*$
+
 - id: terraform_providers_lock
   name: Lock terraform provider versions
   description: Updates provider signatures in dependency lock files.
