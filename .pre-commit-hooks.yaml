@@ -55,6 +55,7 @@
   name: Terraform test
   description: Runs all terraform tests
   entry: hooks/terraform_test.sh
+  pass_filenames: false
   language: script
   files: \.(tf(vars|test\.(hcl|json))?|terraform\.lock\.hcl|\.tf)$
   exclude: \.terraform\/.*$
